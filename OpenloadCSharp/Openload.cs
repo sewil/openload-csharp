@@ -6,9 +6,11 @@ namespace OpenloadCSharp {
 		private static string login;
 		private static string key;
 
-		public static void Authenticate(string login, string key) {
+		public static AccountInfoResponse Authenticate(string login, string key) {
 			Openload.login = login;
 			Openload.key = key;
+
+			return AccountInfo();
 		}
 		public static void Deauthenticate() {
 			login = null;
