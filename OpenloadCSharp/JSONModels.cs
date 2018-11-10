@@ -78,7 +78,7 @@ namespace OpenloadCSharp {
 		public string folderid;
 		public string added;
 		public string last_update;
-		public bool extid;
+		public string extid;
 		public string url;
 	}
 	public class CheckRemoteUploadResponse : Response<IDictionary<int, RemoteUpload>> { }
