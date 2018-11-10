@@ -4,20 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenloadCSharp {
-    public class Response<TResult> {
+namespace OpenloadCSharp
+{
+    public class Response<TResult>
+    {
         public int status;
         public string msg;
         public TResult result;
     }
 
-    public struct AccountInfoResult {
+    public struct AccountInfoResult
+    {
         public string extid;
         public string email;
         public string signup_at;
         public int storage_left;
         public string storage_used;
-        public struct Traffic {
+        public struct Traffic
+        {
             public int left;
             public int used_24h;
         }
@@ -26,7 +30,8 @@ namespace OpenloadCSharp {
     }
     public class AccountInfoResponse : Response<AccountInfoResult> { }
 
-    public struct DownloadTicketResult {
+    public struct DownloadTicketResult
+    {
         public string ticket;
         public string captcha_url;
         public int captcha_w;
@@ -36,7 +41,8 @@ namespace OpenloadCSharp {
     }
     public class DownloadTicketResponse : Response<DownloadTicketResult> { }
 
-    public struct DownloadLinkResult {
+    public struct DownloadLinkResult
+    {
         public string name;
         public int size;
         public string sha1;
@@ -47,7 +53,8 @@ namespace OpenloadCSharp {
     }
     public class DownloadLinkResponse : Response<DownloadLinkResult> { }
 
-    public struct FileInfoFile {
+    public struct FileInfoFile
+    {
         public string id;
         public int status;
         public string name;
@@ -57,19 +64,22 @@ namespace OpenloadCSharp {
     }
     public class FileInfoResponse : Response<IDictionary<string, FileInfoFile>> { }
 
-    public struct UploadResult {
+    public struct UploadResult
+    {
         public string url;
         public string valid_until;
     }
     public class UploadResponse : Response<UploadResult> { }
 
-    public struct AddRemoteUploadResult {
+    public struct AddRemoteUploadResult
+    {
         public string id;
         public string folderid;
     }
     public class AddRemoteUploadResponse : Response<AddRemoteUploadResult> { }
 
-    public struct RemoteUpload {
+    public struct RemoteUpload
+    {
         public int id;
         public string remoteurl;
         public string status;
@@ -83,14 +93,17 @@ namespace OpenloadCSharp {
     }
     public class CheckRemoteUploadResponse : Response<IDictionary<int, RemoteUpload>> { }
 
-    public struct ListFolderResult {
-        public struct Folder {
+    public struct ListFolderResult
+    {
+        public struct Folder
+        {
             public string id;
             public string name;
         }
         public Folder[] folders;
 
-        public struct File {
+        public struct File
+        {
             public string name;
             public string sha1;
             public string folderid;
@@ -109,7 +122,8 @@ namespace OpenloadCSharp {
 
     public class ConvertingFilesResponse : Response<bool> { }
 
-    public struct RunningConvertsResult {
+    public struct RunningConvertsResult
+    {
         public string name;
         public string id;
         public string status;
