@@ -43,10 +43,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JSONModels.cs" />
     <Compile Include="Openload.cs" />
     <Compile Include="ParamsBuilder.cs" />
+    <Compile Include="PayloadModels\AccountInfoPayload.cs" />
+    <Compile Include="PayloadModels\AddRemoteUploadPayload.cs" />
+    <Compile Include="PayloadModels\DownloadLinkPayload.cs" />
+    <Compile Include="PayloadModels\DownloadTicketPayload.cs" />
+    <Compile Include="PayloadModels\File.cs" />
+    <Compile Include="PayloadModels\FileInfoFile.cs" />
+    <Compile Include="PayloadModels\Folder.cs" />
+    <Compile Include="PayloadModels\ListFolderPayload.cs" />
+    <Compile Include="PayloadModels\RemoteUploadPayload.cs" />
+    <Compile Include="PayloadModels\Traffic.cs" />
+    <Compile Include="PayloadModels\UploadPayload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseModels\AccountInfoResponse.cs" />
+    <Compile Include="ResponseModels\AddRemoteUploadResponse.cs" />
+    <Compile Include="ResponseModels\CheckRemoteUploadResponse.cs" />
+    <Compile Include="ResponseModels\ConvertingFilesResponse.cs" />
+    <Compile Include="ResponseModels\DownloadLinkResponse.cs" />
+    <Compile Include="ResponseModels\DownloadTicketResponse.cs" />
+    <Compile Include="ResponseModels\FileInfoResponse.cs" />
+    <Compile Include="ResponseModels\GetSplashResponse.cs" />
+    <Compile Include="ResponseModels\IResponse.cs" />
+    <Compile Include="ResponseModels\ListFolderResponse.cs" />
+    <Compile Include="PayloadModels\RunningConvertsPayload.cs" />
+    <Compile Include="ResponseModels\RunningConvertsResponse.cs" />
+    <Compile Include="ResponseModels\UploadResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
